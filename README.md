@@ -92,7 +92,7 @@ We chose to deploy the best AutoML model. It was deployed via an Azure Container
 
 This URL describes the Swagger URI: http://a9cfd26d-4053-4ad3-90a0-1c34f7618283.southcentralus.azurecontainer.io/swagger.json
 
-The inference.py script returns a response: 
+The inference.py script shown below returns a response: 
 
 ```python
 
@@ -122,3 +122,5 @@ def run(raw_data):
         return error
 
 ```
+
+### Future 
