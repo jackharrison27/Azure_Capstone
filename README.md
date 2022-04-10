@@ -94,7 +94,7 @@ This URL describes the Swagger URI: http://a9cfd26d-4053-4ad3-90a0-1c34f7618283.
 
 The inference.py script returns a response: 
 
-'''
+```python
 
 from azureml.core import Workspace
 import os
@@ -121,4 +121,4 @@ def run(raw_data):
         error = str(e)
         return error
 
-'''
+```
