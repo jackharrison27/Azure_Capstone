@@ -29,7 +29,7 @@ This dataset contains ~1600 examples with 11 independent variables and 1 depende
 ### Data upload
 
 The dataset was uploaded to AzureML Datasets and is seen here: 
-![alt text](https://github.com/jackharrison27/Azure_Machine_Learning_Operations/blob/master/screenshots/architectural_diagram.png?raw=true)
+![alt text](https://github.com/jackharrison27/Azure_Capstone/blob/master/screenshots/data.png?raw=true)
 
 Below is quick view of the data:
-![alt text](https://github.com/jackharrison27/Azure_Machine_Learning_Operations/blob/master/screenshots/architectural_diagram.png?raw=true)
+![alt text](https://github.com/jackharrison27/Azure_Capstone/blob/master/screenshots/data-quick-view.png?raw=true)
