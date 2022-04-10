@@ -12,10 +12,6 @@ def init():
 
 def run(raw_data):
     try:
-        #data = json.loads(raw_data)
-        #data = data["data"]
-        #df = pd.DataFrame.from_dict(data)
-        #result = model.predict(df)
 
         data = json.loads(raw_data)
         df = pd.DataFrame(data, index=[0])
