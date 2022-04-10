@@ -41,9 +41,9 @@ Below is quick view of the data:
 
 The AutoML experiment was set to find a best model based on the primary metric of Accuracy.
 
-### Voting Ensemble
+### Voting Ensemble Model
 
-The AutoML experiemtn was completed in 19m 4s and chose the Voting Ensemble to be the best model. A voting ensemble algorithm taking a majority vote from several algorithms in order to achieve beter results than a single model would. It had an accuracy of 69.86%. 
+The AutoML experiment was completed in 19m 4s and chose the Voting Ensemble to be the best model. A voting ensemble algorithm taking a majority vote from several algorithms in order to achieve beter results than a single model would. It had an accuracy of 69.86%. 
 
 The Details widget shows information regarding all the runs, including their status, duration, and best metric. 
 ![alt text](https://github.com/jackharrison27/Azure_Capstone/blob/master/screenshots/run-widget.png?raw=true)
@@ -62,3 +62,15 @@ This is the best model. As stated, it is a voting ensemble with an accuracy of a
 
 After model deployment, a healthy enpoint was also confirmed via AzureML Endpoints
 ![alt text](https://github.com/jackharrison27/Azure_Capstone/blob/master/screenshots/healthy-endpoint.png?raw=true)
+
+
+## HyperDrive
+
+The HyperDrive experiment was set to find the best metric of Accuracy. We chose to do logistic regression with hyperparameters of C, to help regularization strengths, and max iterations, to help conversion. C was randomly sampled from a uniform distribution between 0 and 1. Max iterations was randomly sampled from 100, 150, 200, 500, 750, and 1000. We also used a bandit early termination policy to begin after 2 runs, re-evaluate every 3 runs, and with a slack factor of 0.2. 
+
+### Logistic Regression Model
+
+The best model that was developed with HyperDrive had an Accuracy of 72.81%. The best parameter values were  C:'0.6548736752745553' and max_iter: '100'. 
+
+ The Details widget shows information regarding all the runs, including their status, duration, and best metric. 
+ 
