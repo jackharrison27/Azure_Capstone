@@ -88,4 +88,4 @@ This shows the best models accuracy and best parameters.
 
 ## Model Deployment
 
-We chose to deploy the best AutoML model. It was deployed via an Azure Container Instance. 
+We chose to deploy the best AutoML model. It was deployed via an Azure Container Instance with Authorization enabled. 
