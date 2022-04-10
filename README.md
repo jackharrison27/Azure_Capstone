@@ -43,4 +43,7 @@ The AutoML experiment was set to find a best model based on the primary metric o
 
 ### Voting Ensemble
 
-The AutoML experiemtn was completed in 19m 4s and chose the Voting Ensemble to be the best model. 
+The AutoML experiemtn was completed in 19m 4s and chose the Voting Ensemble to be the best model. A voting ensemble algorithm taking a majority vote from several algorithms in order to achieve beter results than a single model would. It had an accuracy of 69.86%. 
+
+The Details widget shows information regarding all the runs, including their status, duration, and best metric. 
+
