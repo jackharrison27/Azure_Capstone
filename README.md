@@ -89,3 +89,33 @@ This shows the best models accuracy and best parameters.
 ## Model Deployment
 
 We chose to deploy the best AutoML model. It was deployed via an Azure Container Instance with Authorization enabled. 
+
+This URL describes the Swagger URI: http://a9cfd26d-4053-4ad3-90a0-1c34f7618283.southcentralus.azurecontainer.io/swagger.json
+
+The inference.py script returns a response: 
+'''
+from azureml.core import Workspace
+import os
+import json
+import joblib
+from azureml.core.model import Model
+import pandas as pd
+
+def init():
+    global model
+    model_path = Model.get_model_path('automl-model')
+    model = joblib.load(model_path)
+
+def run(raw_data):
+    try:
+
+        data = json.loads(raw_data)
+        df = pd.DataFrame(data, index=[0])
+        
+        y = model.predict(df)
+        return json.dumps({'classification': int(y[0])})
+
+    except Exception as e:
+        error = str(e)
+        return error
+'''
