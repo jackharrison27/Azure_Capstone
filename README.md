@@ -7,10 +7,6 @@ In this project, we use Azure and Azure ML studio to create models to predict wi
 We create train models using AutoML, then choose and deploy the best model. The model endpoints are then consumed via REST API calls.
 
 
-## Architectural Diagram
-![alt text](https://github.com/jackharrison27/Azure_Machine_Learning_Operations/blob/master/screenshots/architectural_diagram.png?raw=true)
-
-
 ## Preliminary Steps
 
 Before loading the dataset and developing the models, we must do a few steps:
@@ -89,6 +85,66 @@ This shows the best models accuracy and best parameters.
 ## Model Deployment
 
 We chose to deploy the best AutoML model. It was deployed via an Azure Container Instance with Authorization enabled. 
+
+From the Endpoints page, we can see an example of how to consume the endpoint. 
+```
+import urllib.request
+import json
+import os
+import ssl
+
+def allowSelfSignedHttps(allowed):
+    # bypass the server certificate verification on client side
+    if allowed and not os.environ.get('PYTHONHTTPSVERIFY', '') and getattr(ssl, '_create_unverified_context', None):
+        ssl._create_default_https_context = ssl._create_unverified_context
+
+allowSelfSignedHttps(True) # this line is needed if you use self-signed certificate in your scoring service.
+
+# Request data goes here
+data = {
+    "Inputs": {
+        "data":
+        [
+            {
+                "fixed acidity": "7.0",
+                "volatile acidity": "0.4",
+                "citric acid": "0.09",
+                "residual sugar": "2.1",
+                "chlorides": "0.1",
+                "free sulfur dioxide": "8.0",
+                "total sulfur dioxide": "41.0",
+                "density": "0.9934",
+                "pH": "3.12",
+                "sulphates": "0.60",
+                "alcohol": "9.0"
+            },
+        ]
+    },
+    "GlobalParameters": {
+        "method": "predict"
+    }
+}
+
+body = str.encode(json.dumps(data))
+
+url = 'http://a9cfd26d-4053-4ad3-90a0-1c34f7618283.southcentralus.azurecontainer.io/score'
+api_key = '8A2L05Lc1uw5x8aNyeGo9FU2sEjOSb5M' # Replace this with the API key for the web service
+headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
+
+req = urllib.request.Request(url, body, headers)
+
+try:
+    response = urllib.request.urlopen(req)
+
+    result = response.read()
+    print(result)
+except urllib.error.HTTPError as error:
+    print("The request failed with status code: " + str(error.code))
+
+    # Print the headers - they include the requert ID and the timestamp, which are useful for debugging the failure
+    print(error.info())
+    print(error.read().decode("utf8", 'ignore'))
+```
 
 This URL describes the Swagger URI: http://a9cfd26d-4053-4ad3-90a0-1c34f7618283.southcentralus.azurecontainer.io/swagger.json
 
