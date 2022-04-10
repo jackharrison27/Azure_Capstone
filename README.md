@@ -61,4 +61,4 @@ This is the best model. As stated, it is a voting ensemble with an accuracy of a
 ![alt text](https://github.com/jackharrison27/Azure_Capstone/blob/master/screenshots/voting-ensemble.png?raw=true)
 
 After model deployment, a healthy enpoint was also confirmed via AzureML Endpoints
-![alt text](https://github.com/jackharrison27/Azure_Capstone/blob/master/screenshots/healhty-endpoint.png?raw=true)
+![alt text](https://github.com/jackharrison27/Azure_Capstone/blob/master/screenshots/healthy-endpoint.png?raw=true)
