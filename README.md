@@ -72,5 +72,15 @@ The HyperDrive experiment was set to find the best metric of Accuracy. We chose 
 
 The best model that was developed with HyperDrive had an Accuracy of 72.81%. The best parameter values were  C:'0.6548736752745553' and max_iter: '100'. 
 
- The Details widget shows information regarding all the runs, including their status, duration, and best metric. 
+The Details widget shows information regarding all the runs, including their status, duration, and best metric. 
+![alt text](https://github.com/jackharrison27/Azure_Capstone/blob/master/screenshots/hd-run-widget.png?raw=true)
+
+Below is a scatter plot of the HyperDrive runs:
+![alt text](https://github.com/jackharrison27/Azure_Capstone/blob/master/screenshots/healthy-endpoint.png?raw=true)
+
+Below is a scatter plot of the C value and max iter that shows the accuracy shifts:
+![alt text](https://github.com/jackharrison27/Azure_Capstone/blob/master/screenshots/hd-c.png?raw=true)
+
+This shows the best models accuracy and best parameters. 
+![alt text](https://github.com/jackharrison27/Azure_Capstone/blob/master/screenshots/hd-best-values.png?raw=true)
  
