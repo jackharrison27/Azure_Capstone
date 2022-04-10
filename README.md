@@ -83,4 +83,9 @@ Below is a scatter plot of the C value and max iter that shows the accuracy shif
 
 This shows the best models accuracy and best parameters. 
 ![alt text](https://github.com/jackharrison27/Azure_Capstone/blob/master/screenshots/hd-best-values.png?raw=true)
- 
+
+
+
+## Model Deployment
+
+We chose to deploy the best AutoML model. It was deployed via an Azure Container Instance. 
