@@ -1,4 +1,4 @@
-# Predicting Wine Score Capstone Project
+# Predicting Wine Quality Capstone Project
 
 ## Project Overview
 In this project, we use Azure and Azure ML studio to create models to predict wine scores from 1(worst) to 10(best). We developed models two ways: one using AutoML and a second using a custom logistic regression model with various hyperparameters tuned using HyperDrive. 
@@ -123,4 +123,14 @@ def run(raw_data):
 
 ```
 
-### Future 
+## Future Improvements
+
+There are a few ways we can improve the models in the future:
+ - Inlcude more data
+ - Balance the dataset by having similar numbers of all scores
+ - Apply some sort of average to values that are missing instead of removing them
+ - Allows more iterations to run for both AutoML and HyperDrive runs
+ - Include more options for Hyperparameters in HyperDrive runs
+ - Enable deep learning for model development
+
+## Screen Recording
