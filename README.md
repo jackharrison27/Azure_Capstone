@@ -22,4 +22,14 @@ Before loading the dataset and developing the models, we must do a few steps:
  
 ## Data 
 
-This dataset is from 
+This dataset is from the UCI Machine Learning Repository and can be found here: https://archive.ics.uci.edu/ml/datasets/wine+quality
+
+This dataset contains ~1600 examples with 11 independent variables and 1 dependent variable. The data includes things like fixed acidity, density, pH, and alcohol levels and the output variable, quality, based on sensory data. 
+
+### Data upload
+
+The dataset was uploaded to AzureML Datasets and is seen here: 
+![alt text](https://github.com/jackharrison27/Azure_Machine_Learning_Operations/blob/master/screenshots/architectural_diagram.png?raw=true)
+
+Below is quick view of the data:
+![alt text](https://github.com/jackharrison27/Azure_Machine_Learning_Operations/blob/master/screenshots/architectural_diagram.png?raw=true)
