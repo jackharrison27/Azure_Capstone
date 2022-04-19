@@ -41,7 +41,9 @@ Below is quick view of the data:
 
 ## AutoML
 
-The AutoML experiment was set to find a best model based on the primary metric of Accuracy.
+### AutoML Settings
+
+The AutoML experiment was set to find a best classification model based on the primary metric of Accuracy. This was chosen because as we classify wine quality from 1-10, we want to maximize the proportion of true results among the total number of predictions. We chose to have a max of 3 concurrent runs and to time out after 20 minutes to save compute resources over time. 
 
 ### Voting Ensemble Model
 
@@ -64,6 +66,7 @@ This is the best model. As stated, it is a voting ensemble with an accuracy of a
 
 After model deployment, a healthy enpoint was also confirmed via AzureML Endpoints
 ![alt text](https://github.com/jackharrison27/Azure_Capstone/blob/master/screenshots/healthy-endpoint.png?raw=true)
+
 
 
 ## HyperDrive
@@ -90,7 +93,7 @@ This shows the best models accuracy and best parameters.
 
 ## Model Deployment
 
-We chose to deploy the best AutoML model. It was deployed via an Azure Container Instance with Authorization enabled. 
+We chose to deploy the best AutoML model. This model was chosen to be deployed because of its high accuracy and ease of use. It was deployed via an Azure Container Instance with Authorization enabled. The Container Instance was deployed changing the default settings of 0.1 CPU cores and 0.5 GB of memory to instead use 0.5 CPU cores and 1 GB of memory. 
 
 From the Endpoints page, we can see an example of how to consume the endpoint. 
 ```python
