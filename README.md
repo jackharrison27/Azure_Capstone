@@ -58,7 +58,7 @@ Below is a scatter plot of accuracy of all the AutoML runs.
 This shows all the scores of all the different metrics the best model could be scored on. Note that even though this model had the best accuracy, it might have not been the best in other metrics!
 ![alt text](https://github.com/jackharrison27/Azure_Capstone/blob/master/screenshots/details.png?raw=true)
 
-This shows a completed experiment with the best model and a run ID. 
+This shows a completed experiment with the best model and it's run ID. 
 ![alt text](https://github.com/jackharrison27/Azure_Capstone/blob/master/screenshots/finished-automl.png?raw=true)
 
 This is the best model. As stated, it is a voting ensemble with an accuracy of almost 70%!
