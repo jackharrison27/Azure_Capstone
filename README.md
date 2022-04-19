@@ -26,6 +26,12 @@ This dataset contains ~1600 examples with 11 independent variables and 1 depende
 
 ### Data upload
 
+The data was uploaded using the AzureML Datasets UI. It was uploaded from a csv found on the UCI Machine Learning Repository to the Workspace Blob Storage. In both notebooks I loaded the data using these lines: 
+```python
+dataset_name = 'wine_quality'
+dataset = Dataset.get_by_name(workspace=ws, name=dataset_name)
+```
+
 The dataset was uploaded to AzureML Datasets and is seen here: 
 ![alt text](https://github.com/jackharrison27/Azure_Capstone/blob/master/screenshots/data.png?raw=true)
 
@@ -87,7 +93,7 @@ This shows the best models accuracy and best parameters.
 We chose to deploy the best AutoML model. It was deployed via an Azure Container Instance with Authorization enabled. 
 
 From the Endpoints page, we can see an example of how to consume the endpoint. 
-```
+```python
 import urllib.request
 import json
 import os
