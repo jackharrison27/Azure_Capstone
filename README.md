@@ -26,7 +26,7 @@ This dataset contains ~1600 examples with 11 independent variables and 1 depende
 
 ### Data upload
 
-The data was uploaded using the AzureML Datasets UI. It was uploaded from a csv found on the UCI Machine Learning Repository to the Workspace Blob Storage. In both notebooks I loaded the data using these lines: 
+The data was uploaded using the AzureML Datasets UI. It was uploaded from a csv found on the UCI Machine Learning Repository to the Workspace Blob Storage. In both notebooks, I loaded the data by referencing it by name in Blob Storage, as shown below: 
 ```python
 dataset_name = 'wine_quality'
 dataset = Dataset.get_by_name(workspace=ws, name=dataset_name)
