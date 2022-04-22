@@ -156,8 +156,8 @@ data = {
 
 body = str.encode(json.dumps(data))
 
-url = 'http://a9cfd26d-4053-4ad3-90a0-1c34f7618283.southcentralus.azurecontainer.io/score'
-api_key = '8A2L05Lc1uw5x8aNyeGo9FU2sEjOSb5M' # Replace this with the API key for the web service
+url = 'http://a1669202-838d-48ff-b22f-b9f5402ef511.southcentralus.azurecontainer.io/score'
+api_key = 'GvSMUwys0532F6a9J4xaEJ4DAtqqDpSj' # Replace this with the API key for the web service
 headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
 
 req = urllib.request.Request(url, body, headers)
@@ -175,7 +175,7 @@ except urllib.error.HTTPError as error:
     print(error.read().decode("utf8", 'ignore'))
 ```
 
-This URL describes the Swagger URI: http://a9cfd26d-4053-4ad3-90a0-1c34f7618283.southcentralus.azurecontainer.io/swagger.json
+This URL describes the Swagger URI: http://a1669202-838d-48ff-b22f-b9f5402ef511.southcentralus.azurecontainer.io/swagger.json
 
 The inference.py script shown below returns a response: 
 
