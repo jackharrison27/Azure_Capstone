@@ -61,6 +61,9 @@ This shows all the scores of all the different metrics the best model could be s
 This shows a completed experiment with the best model and it's run ID. 
 ![alt text](https://github.com/jackharrison27/Azure_Capstone/blob/master/screenshots/finished-automl.png?raw=true)
 
+This is the best model. As stated, it is a voting ensemble with an accuracy of almost 70%!
+![alt text](https://github.com/jackharrison27/Azure_Capstone/blob/master/screenshots/voting-ensemble.png?raw=true)
+
 Below is the ouptut of the 'best_model' and 'best_run' objects when printed:
 
 Best Model:
@@ -80,8 +83,6 @@ Type: azureml.scriptrun,
 Status: Completed)
 ```
 
-This is the best model. As stated, it is a voting ensemble with an accuracy of almost 70%!
-![alt text](https://github.com/jackharrison27/Azure_Capstone/blob/master/screenshots/voting-ensemble.png?raw=true)
 
 After model deployment, a healthy enpoint was also confirmed via AzureML Endpoints
 ![alt text](https://github.com/jackharrison27/Azure_Capstone/blob/master/screenshots/healthy-endpoint.png?raw=true)
