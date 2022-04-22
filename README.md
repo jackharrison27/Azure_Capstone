@@ -200,7 +200,7 @@ def run(raw_data):
         df = pd.DataFrame(data, index=[0])
         
         y = model.predict(df)
-        return json.dumps({'classification': int(y[0])})
+        return json.dumps({"Results": [int(y[0]]}'})
 
     except Exception as e:
         error = str(e)
